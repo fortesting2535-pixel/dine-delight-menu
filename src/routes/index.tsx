@@ -1,24 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Preloader } from "@/components/Preloader";
+import { Hero } from "@/components/Hero";
+import { MenuSection } from "@/components/MenuSection";
+import { StatsStrip } from "@/components/StatsStrip";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Kitchen Choice — Digital Café Menu" },
+      {
+        name: "description",
+        content:
+          "Browse the Kitchen Choice café menu: coffee, iced coffee, signature coolers, fresh bakes, savoury bites and desserts with prices.",
+      },
+      { property: "og:title", content: "Kitchen Choice — Digital Café Menu" },
+      {
+        property: "og:description",
+        content:
+          "Coffee, iced coffee, signature coolers, bakery, bites and desserts — browse the full café menu with prices.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState("");
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      {loading ? <Preloader onDone={() => setLoading(false)} /> : null}
+      <main className={loading ? "opacity-0" : "animate-rise"}>
+        <Hero query={query} onQueryChange={setQuery} />
+        <MenuSection query={query} />
+        <StatsStrip />
+      </main>
+    </>
   );
 }
