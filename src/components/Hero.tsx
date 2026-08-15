@@ -47,7 +47,7 @@ export function Hero({
     return () => window.clearInterval(id);
   }, []);
 
-  const slide = slides[active];
+  const slide = slides[active] ?? slides[0]!;
 
   return (
     <header className="px-4 pt-5 sm:px-6">
