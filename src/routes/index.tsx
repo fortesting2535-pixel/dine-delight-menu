@@ -8,20 +8,23 @@ import { StatsStrip } from "@/components/StatsStrip";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kitchen Choice — Digital Café Menu" },
+      { title: "Kitchen Choice — Family Restaurant Digital Menu" },
       {
         name: "description",
         content:
-          "Browse the Kitchen Choice café menu: coffee, iced coffee, signature coolers, fresh bakes, savoury bites and desserts with prices.",
+          "Browse the Kitchen Choice family restaurant menu: starters, tandoor, biryani, paneer and veg mains, chicken and mutton curries, seafood, breads, beverages and desserts with prices.",
       },
-      { property: "og:title", content: "Kitchen Choice — Digital Café Menu" },
+      { property: "og:title", content: "Kitchen Choice — Family Restaurant Digital Menu" },
       {
         property: "og:description",
         content:
-          "Coffee, iced coffee, signature coolers, bakery, bites and desserts — browse the full café menu with prices.",
+          "51 dishes across 10 sections — starters, tandoor, biryani, curries, seafood, breads and desserts with prices.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
+
   component: Index,
 });
 
