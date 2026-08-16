@@ -1,41 +1,14 @@
 import { useEffect, useState, useRef, useMemo, useCallback } from "react";
-import { Search, Instagram, Facebook, Twitter, Youtube, Star, Sparkles, X, Utensils, ChevronRight } from "lucide-react";
+import { Search, Instagram, Facebook, Twitter, Youtube, Star, X, Utensils, ChevronRight } from "lucide-react";
 import heroBanner from "@/assets/hero-restaurant-banner.jpg";
-import heroBiryani from "@/assets/hero-biryani.png";
-import heroPaneerTikka from "@/assets/hero-paneer-tikka.png";
-import { CAFE_NAME, chefsSpecials, categories, allItems, type Badge, type MenuItem } from "@/data/menu";
+import { CAFE_NAME, chefsSpecials, categories, allItems, type Badge } from "@/data/menu";
 
-type Slide = {
-  image: string;
-  eyebrow: string;
-  title: string;
-  copy: string;
-  variant: "banner" | "dish";
+const slide = {
+  image: heroBanner,
+  eyebrow: "Family dining, since day one",
+  title: "A Table For Everyone",
+  copy: "Warm lights, big plates and a menu built for the whole family to share.",
 };
-
-const slides: Slide[] = [
-  {
-    image: heroBanner,
-    eyebrow: "Family dining, since day one",
-    title: "A Table For Everyone",
-    copy: "Warm lights, big plates and a menu built for the whole family to share.",
-    variant: "banner",
-  },
-  {
-    image: heroBiryani,
-    eyebrow: "Sealed & dum-cooked",
-    title: "Hyderabadi Biryani",
-    copy: "Long-grain basmati layered with chicken, saffron and slow-fried onion.",
-    variant: "dish",
-  },
-  {
-    image: heroPaneerTikka,
-    eyebrow: "Straight off the skewer",
-    title: "Paneer Tikka",
-    copy: "Tandoor-charred cottage cheese with peppers and mint chutney.",
-    variant: "dish",
-  },
-];
 
 const socials = [
   { icon: Instagram, label: "Instagram" },
@@ -57,16 +30,8 @@ export function Hero({
   query: string;
   onQueryChange: (value: string) => void;
 }) {
-  const [active, setActive] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const id = window.setInterval(() => setActive((i) => (i + 1) % slides.length), 4500);
-    return () => window.clearInterval(id);
-  }, []);
-
-  const slide = slides[active] ?? slides[0]!;
 
   const term = query.trim().toLowerCase();
 
@@ -256,154 +221,33 @@ export function Hero({
         </div>
 
         <div className="relative mt-5 overflow-hidden rounded-3xl bg-gradient-plum p-6 shadow-float sm:p-10">
-          {/* Base ambient glow */}
           <div className="pointer-events-none absolute -right-10 -top-16 h-48 w-48 rounded-full bg-orange/20 blur-2xl" />
 
-          {/* Extra depth & saffron accents for dish slides */}
-          {slide.variant === "dish" && (
-            <>
-              <div className="pointer-events-none absolute right-[12%] top-[8%] h-44 w-44 rounded-full bg-gold/[0.07] blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-8 left-[18%] h-28 w-28 rounded-full bg-orange/10 blur-2xl" />
-              {/* Saffron strand accents */}
-              <div className="pointer-events-none absolute right-[28%] bottom-[18%] h-7 w-[1.5px] rotate-[35deg] rounded-full bg-orange/20" />
-              <div className="pointer-events-none absolute right-[34%] bottom-[26%] h-5 w-[1px] rotate-[-22deg] rounded-full bg-orange/15" />
-              <div className="pointer-events-none absolute left-[48%] bottom-[12%] h-4 w-[1px] rotate-[58deg] rounded-full bg-orange/12" />
-              <div className="pointer-events-none absolute right-[18%] top-[60%] h-3 w-[1px] rotate-[12deg] rounded-full bg-orange/15" />
-            </>
-          )}
+          <img
+            src={slide.image}
+            alt="Kitchen Choice family restaurant dining room"
+            width={1280}
+            height={960}
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-45"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-plum-deep/90 via-plum-deep/70 to-transparent" />
 
-          {/* Banner background image + overlay */}
-          {slide.variant === "banner" ? (
-            <>
-              <img
-                key={slide.title}
-                src={slide.image}
-                alt="Kitchen Choice family restaurant dining room"
-                width={1280}
-                height={960}
-                className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-45"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-plum-deep/90 via-plum-deep/70 to-transparent" />
-            </>
-          ) : null}
-
-          {/* ── Content grid ── */}
-          <div className="relative grid gap-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
-            {/* Text column */}
+          <div className="relative max-w-[760px] py-1">
             <div key={slide.title} className="animate-rise min-w-0">
-              {/* Eyebrow */}
               <p className="text-[11px] uppercase tracking-[0.32em] text-gold">{slide.eyebrow}</p>
 
-              {/* Decorative separator for dish slides */}
-              {slide.variant === "dish" && (
-                <div className="mt-2.5 flex items-center gap-2">
-                  <span className="h-px w-10 bg-gradient-to-r from-gold/60 to-gold/10" />
-                  <Sparkles className="h-3 w-3 text-gold/50" aria-hidden="true" />
-                </div>
-              )}
+              <h1 className="mt-3 text-display text-4xl uppercase text-cream sm:text-[4.4rem] lg:text-[5.2rem]">
+                {slide.title}
+              </h1>
 
-              {/* Title — two-tone for dish slides */}
-              {slide.variant === "dish" ? (
-                <h1 className="mt-3 text-display uppercase leading-[0.92]">
-                  {(() => {
-                    const words = slide.title.split(" ");
-                    const top = words.slice(0, -1).join(" ");
-                    const bottom = words[words.length - 1];
-                    return (
-                      <>
-                        <span className="block text-4xl text-cream sm:text-[3.4rem] lg:text-6xl">
-                          {top}
-                        </span>
-                        <span
-                          className="block text-4xl sm:text-[3.4rem] lg:text-6xl"
-                          style={{ color: "var(--gold)" }}
-                        >
-                          {bottom}
-                        </span>
-                      </>
-                    );
-                  })()}
-                </h1>
-              ) : (
-                <h1 className="mt-3 text-display text-4xl uppercase text-cream sm:text-6xl">
-                  {slide.title}
-                </h1>
-              )}
+              <p className="mt-3 max-w-md text-sm text-cream/75 sm:text-base">{slide.copy}</p>
 
-              <p className="mt-3 max-w-sm text-sm text-cream/70">{slide.copy}</p>
-
-              {/* Rating badge — refined for dish, simple for banner */}
               <div className="mt-5 flex items-center gap-2">
-                {slide.variant === "dish" ? (
-                  <span className="inline-flex items-center gap-2 rounded-full border border-gold/15 bg-plum-deep/70 px-4 py-1.5 text-xs backdrop-blur-sm">
-                    <Star className="h-3.5 w-3.5 fill-current text-gold" aria-hidden="true" />
-                    <span className="font-semibold text-gold">4.8</span>
-                    <span className="h-3.5 w-px bg-cream/20" />
-                    <span className="text-cream/60">2.4k reviews</span>
-                  </span>
-                ) : (
-                  <span className="flex items-center gap-1 rounded-full bg-cream/10 px-3 py-1 text-xs text-gold">
-                    <Star className="h-3.5 w-3.5 fill-current" aria-hidden="true" /> 4.8 · 2.4k reviews
-                  </span>
-                )}
+                <span className="flex items-center gap-1 rounded-full bg-cream/10 px-3 py-1 text-xs text-gold">
+                  <Star className="h-3.5 w-3.5 fill-current" aria-hidden="true" /> 4.8 · 2.4k reviews
+                </span>
               </div>
             </div>
-
-            {/* Image column — decorative frame for dish slides */}
-            {slide.variant === "dish" ? (
-              <div className="relative mx-auto">
-                <div className="relative h-52 w-52 sm:h-72 sm:w-72">
-                  {/* Outer golden ring */}
-                  <div className="pointer-events-none absolute -inset-5 rounded-full border border-gold/20 sm:-inset-8" />
-                  {/* Inner golden ring */}
-                  <div className="pointer-events-none absolute -inset-2 rounded-full border border-gold/40 sm:-inset-4" />
-
-                  {/* Quatrefoil ornament (top-right of outer ring) */}
-                  <svg
-                    className="pointer-events-none absolute -right-7 -top-5 h-5 w-5 text-gold/40 sm:-right-10 sm:-top-8 sm:h-6 sm:w-6"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <ellipse cx="10" cy="4" rx="2.8" ry="3.8" />
-                    <ellipse cx="10" cy="16" rx="2.8" ry="3.8" />
-                    <ellipse cx="4" cy="10" rx="3.8" ry="2.8" />
-                    <ellipse cx="16" cy="10" rx="3.8" ry="2.8" />
-                  </svg>
-
-                  {/* Small accent dots on ring perimeter */}
-                  <div className="pointer-events-none absolute -left-3 top-[36%] h-1.5 w-1.5 rounded-full bg-gold/50 sm:-left-5" />
-                  <div className="pointer-events-none absolute -right-1 bottom-[28%] h-1 w-1 rounded-full bg-gold/35 sm:-right-3" />
-                  <div className="pointer-events-none absolute bottom-[-4px] left-[40%] h-1 w-1 rounded-full bg-gold/30" />
-
-                  {/* Dish image */}
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    width={1024}
-                    height={1024}
-                    className="h-full w-full animate-float object-contain drop-shadow-2xl"
-                  />
-                </div>
-              </div>
-            ) : (
-              <div className="hidden sm:block sm:h-72 sm:w-72" aria-hidden="true" />
-            )}
-          </div>
-
-          {/* Slide indicator dots */}
-          <div className="relative mt-6 flex gap-2">
-            {slides.map((item, index) => (
-              <button
-                key={item.title}
-                type="button"
-                onClick={() => setActive(index)}
-                aria-label={`Show ${item.title}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  index === active ? "w-8 bg-gradient-gold" : "w-3 bg-cream/25"
-                }`}
-              />
-            ))}
           </div>
         </div>
 
