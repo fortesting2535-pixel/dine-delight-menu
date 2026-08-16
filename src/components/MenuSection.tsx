@@ -1,5 +1,12 @@
 import { useMemo, useState } from "react";
-import { categories, type MenuItem } from "@/data/menu";
+import { categories, type Badge, type MenuItem } from "@/data/menu";
+
+const badgeStyles: Record<Badge, string> = {
+  Bestseller: "bg-plum-deep text-cream",
+  "Chef's Pick": "bg-orange text-cream",
+  Trending: "bg-plum-deep text-gold",
+};
+
 
 function VegDot({ veg }: { veg: boolean }) {
   return (
@@ -27,10 +34,13 @@ function DishCard({ item }: { item: MenuItem }) {
           className="aspect-square w-full object-cover"
         />
         {item.badge ? (
-          <span className="absolute left-2 top-2 rounded-full bg-gradient-gold px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-plum-deep">
+          <span
+            className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider ${badgeStyles[item.badge]}`}
+          >
             {item.badge}
           </span>
         ) : null}
+
       </div>
       <div className="p-3">
         <div className="flex min-w-0 items-center gap-1.5">

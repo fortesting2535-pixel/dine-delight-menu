@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 import { Leaf, ChefHat, Heart } from "lucide-react";
-import preloaderHero from "@/assets/preloader-hero.jpg";
-import cappuccino from "@/assets/dishes/cappuccino.jpg";
-import croissant from "@/assets/dishes/butter-croissant.jpg";
-import waffle from "@/assets/dishes/belgian-waffle.jpg";
-import mojito from "@/assets/dishes/virgin-mojito.jpg";
+import preloaderHero from "@/assets/menu/tandoori-chicken-full.jpg";
+import butterChicken from "@/assets/menu/butter-chicken.jpg";
+import paneerTikka from "@/assets/menu/paneer-tikka.jpg";
+import butterNaan from "@/assets/menu/butter-naan.jpg";
+import gulabJamun from "@/assets/menu/gulab-jamun.jpg";
 import { CAFE_NAME } from "@/data/menu";
 
 const corners = [
-  { src: cappuccino, className: "left-0 top-0 -translate-x-1/4 -translate-y-1/4" },
-  { src: croissant, className: "right-0 top-0 translate-x-1/4 -translate-y-1/4" },
-  { src: mojito, className: "bottom-0 left-0 -translate-x-1/4 translate-y-1/4" },
-  { src: waffle, className: "bottom-0 right-0 translate-x-1/4 translate-y-1/4" },
+  { src: butterChicken, className: "left-0 top-0 -translate-x-1/4 -translate-y-1/4" },
+  { src: paneerTikka, className: "right-0 top-0 translate-x-1/4 -translate-y-1/4" },
+  { src: butterNaan, className: "bottom-0 left-0 -translate-x-1/4 translate-y-1/4" },
+  { src: gulabJamun, className: "bottom-0 right-0 translate-x-1/4 translate-y-1/4" },
 ];
 
 const marks = [
   { icon: Leaf, label: "Fresh Ingredients" },
-  { icon: ChefHat, label: "Expertly Brewed" },
+  { icon: ChefHat, label: "Expertly Prepared" },
   { icon: Heart, label: "Made With Love" },
 ];
+
 
 export function Preloader({ onDone }: { onDone: () => void }) {
   const [progress, setProgress] = useState(0);
@@ -69,9 +70,9 @@ export function Preloader({ onDone }: { onDone: () => void }) {
           <div className="absolute -inset-6 rounded-full border border-gold/30 animate-spin-slow" />
           <img
             src={preloaderHero}
-            alt="Freshly poured latte with rosetta art"
-            width={1024}
-            height={1024}
+            alt="Tandoori chicken platter fresh from the clay oven"
+            width={768}
+            height={768}
             className="h-44 w-44 rounded-full object-cover shadow-float sm:h-56 sm:w-56"
           />
         </div>
@@ -79,7 +80,8 @@ export function Preloader({ onDone }: { onDone: () => void }) {
         <div className="space-y-2">
           <p className="font-script text-2xl text-gold">welcome to</p>
           <h1 className="text-display text-5xl uppercase text-cream sm:text-6xl">{CAFE_NAME}</h1>
-          <p className="text-xs uppercase tracking-[0.42em] text-cream/60">Digital Café Menu</p>
+          <p className="text-xs uppercase tracking-[0.42em] text-cream/60">Family Restaurant Menu</p>
+
         </div>
 
         <div className="w-full max-w-xs">

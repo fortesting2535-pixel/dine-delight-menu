@@ -1,12 +1,13 @@
-import { Coffee, Leaf, Clock, Sparkles } from "lucide-react";
+import { UtensilsCrossed, Leaf, Clock, Sparkles } from "lucide-react";
 import { CAFE_NAME, categories, totalItems } from "@/data/menu";
 
 const stats = [
-  { icon: Coffee, value: `${totalItems}+`, label: "Menu Items" },
+  { icon: UtensilsCrossed, value: `${totalItems}+`, label: "Menu Items" },
   { icon: Leaf, value: "Veg & Non-Veg", label: "Clearly Marked" },
-  { icon: Clock, value: "Freshly Brewed", label: "All Day, Daily" },
+  { icon: Clock, value: "Freshly Cooked", label: "Lunch & Dinner, Daily" },
   { icon: Sparkles, value: `${categories.length}`, label: "Curated Sections" },
 ];
+
 
 export function StatsStrip() {
   return (
@@ -29,7 +30,7 @@ export function StatsStrip() {
         </div>
         <div className="mt-10 border-t border-cream/10 pt-6 text-center">
           <p className="text-display text-2xl uppercase text-cream">{CAFE_NAME}</p>
-          <p className="mt-1 font-script text-base text-gold">see you at the counter</p>
+          <p className="mt-1 font-script text-base text-gold">see you at the table</p>
           <p className="mt-3 text-[11px] uppercase tracking-widest text-cream/40">
             Prices in ₹ · inclusive of taxes · menu subject to availability
           </p>
