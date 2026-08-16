@@ -1,44 +1,56 @@
-import espresso from "@/assets/dishes/espresso.jpg";
-import cappuccino from "@/assets/dishes/cappuccino.jpg";
-import cafeLatte from "@/assets/dishes/cafe-latte.jpg";
-import flatWhite from "@/assets/dishes/flat-white.jpg";
-import hazelnutMocha from "@/assets/dishes/hazelnut-mocha.jpg";
-import filterKaapi from "@/assets/dishes/filter-kaapi.jpg";
-import affogato from "@/assets/dishes/affogato.jpg";
-import masalaChai from "@/assets/dishes/masala-chai.jpg";
-import hotChocolate from "@/assets/dishes/hot-chocolate.jpg";
-import icedAmericano from "@/assets/dishes/iced-americano.jpg";
-import icedCaramelMacchiato from "@/assets/dishes/iced-caramel-macchiato.jpg";
-import coldCoffeeFrappe from "@/assets/dishes/cold-coffee-frappe.jpg";
-import icedMocha from "@/assets/dishes/iced-mocha.jpg";
-import vietnameseIced from "@/assets/dishes/vietnamese-iced-coffee.jpg";
-import blueLagoon from "@/assets/dishes/blue-lagoon.jpg";
-import virginMojito from "@/assets/dishes/virgin-mojito.jpg";
-import berryBlast from "@/assets/dishes/berry-blast.jpg";
-import watermelonBasil from "@/assets/dishes/watermelon-basil.jpg";
-import roseFalooda from "@/assets/dishes/rose-falooda.jpg";
-import butterCroissant from "@/assets/dishes/butter-croissant.jpg";
-import chocoChipCookie from "@/assets/dishes/choco-chip-cookie.jpg";
-import blueberryMuffin from "@/assets/dishes/blueberry-muffin.jpg";
-import cinnamonRoll from "@/assets/dishes/cinnamon-roll.jpg";
-import bananaBread from "@/assets/dishes/banana-bread.jpg";
-import redVelvetCupcake from "@/assets/dishes/red-velvet-cupcake.jpg";
-import almondBiscotti from "@/assets/dishes/almond-biscotti.jpg";
-import paneerSandwich from "@/assets/dishes/paneer-tikka-sandwich.jpg";
-import periPeriFries from "@/assets/dishes/peri-peri-fries.jpg";
-import cheesyNachos from "@/assets/dishes/cheesy-nachos.jpg";
-import chickenPanini from "@/assets/dishes/chicken-panini.jpg";
-import garlicBread from "@/assets/dishes/garlic-bread.jpg";
-import spinachQuiche from "@/assets/dishes/spinach-quiche.jpg";
-import chickenCroissant from "@/assets/dishes/chicken-croissant.jpg";
-import bakedCheesecake from "@/assets/dishes/baked-cheesecake.jpg";
-import lavaCake from "@/assets/dishes/lava-cake.jpg";
-import tiramisu from "@/assets/dishes/tiramisu.jpg";
-import belgianWaffle from "@/assets/dishes/belgian-waffle.jpg";
-import fruitTart from "@/assets/dishes/fruit-tart.jpg";
-import nutellaBrownie from "@/assets/dishes/nutella-brownie.jpg";
+import vegSeekhKebab from "@/assets/menu/veg-seekh-kebab.jpg";
+import paneerTikka from "@/assets/menu/paneer-tikka.jpg";
+import haraBharaKebab from "@/assets/menu/hara-bhara-kebab.jpg";
+import crispyCornChaat from "@/assets/menu/crispy-corn-chaat.jpg";
+import chilliPaneer from "@/assets/menu/chilli-paneer.jpg";
+import chickenSeekhKebab from "@/assets/menu/chicken-seekh-kebab.jpg";
+import tandooriChickenHalf from "@/assets/menu/tandoori-chicken-half.jpg";
+import chicken65 from "@/assets/menu/chicken-65.jpg";
+import muttonSeekhKebab from "@/assets/menu/mutton-seekh-kebab.jpg";
+import fishAmritsari from "@/assets/menu/fish-amritsari.jpg";
+import tandooriChickenFull from "@/assets/menu/tandoori-chicken-full.jpg";
+import chickenMalaiTikka from "@/assets/menu/chicken-malai-tikka.jpg";
+import reshmiKebab from "@/assets/menu/reshmi-kebab.jpg";
+import tandooriPrawns from "@/assets/menu/tandoori-prawns.jpg";
+import achariPaneerTikka from "@/assets/menu/achari-paneer-tikka.jpg";
+import tandooriMushroom from "@/assets/menu/tandoori-mushroom.jpg";
+import hyderabadiChickenBiryani from "@/assets/menu/hyderabadi-chicken-biryani.jpg";
+import muttonBiryani from "@/assets/menu/mutton-biryani.jpg";
+import vegBiryani from "@/assets/menu/veg-biryani.jpg";
+import eggBiryani from "@/assets/menu/egg-biryani.jpg";
+import jeeraRice from "@/assets/menu/jeera-rice.jpg";
+import kadhaiPaneer from "@/assets/menu/kadhai-paneer.jpg";
+import paneerButterMasala from "@/assets/menu/paneer-butter-masala.jpg";
+import palakPaneer from "@/assets/menu/palak-paneer.jpg";
+import dalMakhani from "@/assets/menu/dal-makhani.jpg";
+import malaiKofta from "@/assets/menu/malai-kofta.jpg";
+import mixedVegCurry from "@/assets/menu/mixed-veg-curry.jpg";
+import butterChicken from "@/assets/menu/butter-chicken.jpg";
+import chickenCurry from "@/assets/menu/chicken-curry.jpg";
+import muttonRoganJosh from "@/assets/menu/mutton-rogan-josh.jpg";
+import chickenChettinad from "@/assets/menu/chicken-chettinad.jpg";
+import kadhaiChicken from "@/assets/menu/kadhai-chicken.jpg";
+import muttonKoftaCurry from "@/assets/menu/mutton-kofta-curry.jpg";
+import fishCurry from "@/assets/menu/fish-curry.jpg";
+import prawnMasala from "@/assets/menu/prawn-masala.jpg";
+import goanFishCurry from "@/assets/menu/goan-fish-curry.jpg";
+import butterGarlicPrawns from "@/assets/menu/butter-garlic-prawns.jpg";
+import butterNaan from "@/assets/menu/butter-naan.jpg";
+import garlicNaan from "@/assets/menu/garlic-naan.jpg";
+import tandooriRoti from "@/assets/menu/tandoori-roti.jpg";
+import lachhaParatha from "@/assets/menu/lachha-paratha.jpg";
+import cheeseNaan from "@/assets/menu/cheese-naan.jpg";
+import masalaChaas from "@/assets/menu/masala-chaas.jpg";
+import sweetLassi from "@/assets/menu/sweet-lassi.jpg";
+import freshLimeSoda from "@/assets/menu/fresh-lime-soda.jpg";
+import virginMojito from "@/assets/menu/virgin-mojito.jpg";
+import softDrinks from "@/assets/menu/soft-drinks.jpg";
+import gulabJamun from "@/assets/menu/gulab-jamun.jpg";
+import rasmalai from "@/assets/menu/rasmalai.jpg";
+import gajarKaHalwa from "@/assets/menu/gajar-ka-halwa.jpg";
+import kulfiFalooda from "@/assets/menu/kulfi-falooda.jpg";
 
-export type Badge = "Bestseller" | "Chef's Pick" | "New";
+export type Badge = "Bestseller" | "Chef's Pick" | "Trending";
 
 export type MenuItem = {
   id: string;
@@ -62,381 +74,504 @@ export const CAFE_NAME = "Kitchen Choice";
 
 export const categories: Category[] = [
   {
-    id: "coffee",
-    name: "Coffee",
-    tagline: "Hand-pulled shots, brewed all day",
-    thumb: cappuccino,
+    id: "starters-veg",
+    name: "Starters (Veg)",
+    tagline: "Start the table right",
+    thumb: paneerTikka,
     items: [
       {
-        id: "espresso",
-        name: "Espresso",
-        description: "A bold single shot with thick golden crema.",
-        price: 120,
-        image: espresso,
+        id: "veg-seekh-kebab",
+        name: "Veg Seekh Kebab",
+        description: "Skewered mixed vegetable kebabs, chargrilled.",
+        price: 229,
+        image: vegSeekhKebab,
         veg: true,
       },
       {
-        id: "cappuccino",
-        name: "Cappuccino",
-        description: "Equal parts espresso, milk and airy foam.",
-        price: 180,
-        image: cappuccino,
-        veg: true,
-        badge: "Bestseller",
-      },
-      {
-        id: "cafe-latte",
-        name: "Café Latte",
-        description: "Silky steamed milk poured over a double shot.",
-        price: 190,
-        image: cafeLatte,
-        veg: true,
-      },
-      {
-        id: "flat-white",
-        name: "Flat White",
-        description: "Velvety microfoam, strong and smooth.",
-        price: 190,
-        image: flatWhite,
-        veg: true,
-      },
-      {
-        id: "hazelnut-mocha",
-        name: "Hazelnut Mocha",
-        description: "Chocolate, hazelnut and espresso with cream.",
-        price: 230,
-        image: hazelnutMocha,
+        id: "paneer-tikka",
+        name: "Paneer Tikka",
+        description: "Marinated cottage cheese cubes, tandoor grilled.",
+        price: 259,
+        image: paneerTikka,
         veg: true,
         badge: "Chef's Pick",
       },
       {
-        id: "filter-kaapi",
-        name: "Filter Kaapi",
-        description: "South Indian decoction, frothed in a tumbler.",
-        price: 140,
-        image: filterKaapi,
+        id: "hara-bhara-kebab",
+        name: "Hara Bhara Kebab",
+        description: "Spinach & pea patties, lightly spiced.",
+        price: 219,
+        image: haraBharaKebab,
         veg: true,
       },
       {
-        id: "affogato",
-        name: "Affogato",
-        description: "Vanilla gelato drowned in a hot espresso shot.",
-        price: 240,
-        image: affogato,
+        id: "crispy-corn-chaat",
+        name: "Crispy Corn Chaat",
+        description: "Golden fried corn tossed in tangy spices.",
+        price: 199,
+        image: crispyCornChaat,
         veg: true,
       },
       {
-        id: "masala-chai",
-        name: "Masala Chai",
-        description: "Ginger, cardamom and clove simmered in milk.",
-        price: 110,
-        image: masalaChai,
-        veg: true,
-      },
-      {
-        id: "hot-chocolate",
-        name: "Hot Chocolate",
-        description: "Dark cocoa, warm milk and toasted marshmallows.",
-        price: 210,
-        image: hotChocolate,
+        id: "chilli-paneer",
+        name: "Chilli Paneer (Dry)",
+        description: "Paneer tossed in Indo-Chinese chilli sauce.",
+        price: 259,
+        image: chilliPaneer,
         veg: true,
       },
     ],
   },
   {
-    id: "iced-coffee",
-    name: "Iced Coffee",
-    tagline: "Cold, tall and slow-poured",
-    thumb: icedCaramelMacchiato,
+    id: "starters-nonveg",
+    name: "Starters (Non-Veg)",
+    tagline: "Smoke, spice and char",
+    thumb: chicken65,
     items: [
       {
-        id: "iced-americano",
-        name: "Iced Americano",
-        description: "Espresso over ice with chilled spring water.",
-        price: 170,
-        image: icedAmericano,
+        id: "chicken-seekh-kebab",
+        name: "Chicken Seekh Kebab",
+        description: "Minced chicken kebabs with aromatic spices.",
+        price: 269,
+        image: chickenSeekhKebab,
+        veg: false,
+      },
+      {
+        id: "tandoori-chicken-half",
+        name: "Tandoori Chicken (Half)",
+        description: "Classic tandoori chicken, char-grilled.",
+        price: 299,
+        image: tandooriChickenHalf,
+        veg: false,
+      },
+      {
+        id: "chicken-65",
+        name: "Chicken 65",
+        description: "Spicy deep-fried chicken bites, curry leaf tempering.",
+        price: 279,
+        image: chicken65,
+        veg: false,
+      },
+      {
+        id: "mutton-seekh-kebab",
+        name: "Mutton Seekh Kebab",
+        description: "Minced mutton kebabs, smoky tandoor finish.",
+        price: 319,
+        image: muttonSeekhKebab,
+        veg: false,
+      },
+      {
+        id: "fish-amritsari",
+        name: "Fish Amritsari",
+        description: "Batter-fried fish, Punjabi spice coating.",
+        price: 309,
+        image: fishAmritsari,
+        veg: false,
+      },
+    ],
+  },
+  {
+    id: "tandoor",
+    name: "Tandoor",
+    tagline: "Straight from the clay oven",
+    thumb: tandooriChickenFull,
+    items: [
+      {
+        id: "tandoori-chicken-full",
+        name: "Tandoori Chicken (Full)",
+        description: "Whole chicken marinated & tandoor roasted.",
+        price: 549,
+        image: tandooriChickenFull,
+        veg: false,
+      },
+      {
+        id: "chicken-malai-tikka",
+        name: "Chicken Malai Tikka",
+        description: "Creamy, mildly spiced chicken tikka.",
+        price: 299,
+        image: chickenMalaiTikka,
+        veg: false,
+      },
+      {
+        id: "reshmi-kebab",
+        name: "Reshmi Kebab",
+        description: "Soft, silky chicken kebabs.",
+        price: 289,
+        image: reshmiKebab,
+        veg: false,
+      },
+      {
+        id: "tandoori-prawns",
+        name: "Tandoori Prawns",
+        description: "Char-grilled prawns in tandoori spice.",
+        price: 399,
+        image: tandooriPrawns,
+        veg: false,
+      },
+      {
+        id: "achari-paneer-tikka",
+        name: "Achari Paneer Tikka",
+        description: "Pickle-spiced grilled cottage cheese.",
+        price: 269,
+        image: achariPaneerTikka,
         veg: true,
       },
       {
-        id: "iced-caramel-macchiato",
-        name: "Iced Caramel Macchiato",
-        description: "Layered milk, espresso and salted caramel.",
-        price: 250,
-        image: icedCaramelMacchiato,
+        id: "tandoori-mushroom",
+        name: "Tandoori Mushroom",
+        description: "Marinated mushrooms, tandoor roasted.",
+        price: 239,
+        image: tandooriMushroom,
         veg: true,
+      },
+    ],
+  },
+  {
+    id: "biryani",
+    name: "Biryani & Rice",
+    tagline: "Dum-cooked, sealed with steam",
+    thumb: hyderabadiChickenBiryani,
+    items: [
+      {
+        id: "hyderabadi-chicken-biryani",
+        name: "Hyderabadi Chicken Biryani",
+        description: "Dum-cooked basmati rice with chicken, traditional spices.",
+        price: 319,
+        image: hyderabadiChickenBiryani,
+        veg: false,
         badge: "Bestseller",
       },
       {
-        id: "cold-coffee-frappe",
-        name: "Cold Coffee Frappé",
-        description: "Blended thick with cream and chocolate drizzle.",
-        price: 240,
-        image: coldCoffeeFrappe,
+        id: "mutton-biryani",
+        name: "Mutton Biryani",
+        description: "Slow-cooked basmati rice layered with tender mutton.",
+        price: 379,
+        image: muttonBiryani,
+        veg: false,
+      },
+      {
+        id: "veg-biryani",
+        name: "Veg Biryani",
+        description: "Fragrant basmati rice with mixed vegetables.",
+        price: 249,
+        image: vegBiryani,
         veg: true,
       },
       {
-        id: "iced-mocha",
-        name: "Iced Mocha",
-        description: "Cocoa and cold brew swirled with cold milk.",
-        price: 230,
-        image: icedMocha,
-        veg: true,
+        id: "egg-biryani",
+        name: "Egg Biryani",
+        description: "Basmati rice with boiled eggs & biryani masala.",
+        price: 239,
+        image: eggBiryani,
+        veg: false,
       },
       {
-        id: "vietnamese-iced-coffee",
-        name: "Vietnamese Iced Coffee",
-        description: "Slow-drip brew sweetened with condensed milk.",
-        price: 220,
-        image: vietnameseIced,
+        id: "jeera-rice",
+        name: "Jeera Rice",
+        description: "Steamed basmati rice tempered with cumin.",
+        price: 149,
+        image: jeeraRice,
         veg: true,
-        badge: "New",
       },
     ],
   },
   {
-    id: "signature",
-    name: "Signature Drinks",
-    tagline: "Coolers shaken to order",
-    thumb: virginMojito,
+    id: "paneer-veg-mains",
+    name: "Paneer & Veg Mains",
+    tagline: "Gravies worth mopping up",
+    thumb: kadhaiPaneer,
     items: [
       {
-        id: "blue-lagoon",
-        name: "Blue Lagoon",
-        description: "Blue curaçao syrup, lemon and fizzy soda.",
-        price: 200,
-        image: blueLagoon,
+        id: "kadhai-paneer",
+        name: "Kadhai Paneer",
+        description: "Paneer & bell peppers in a spiced tomato masala.",
+        price: 279,
+        image: kadhaiPaneer,
+        veg: true,
+        badge: "Trending",
+      },
+      {
+        id: "paneer-butter-masala",
+        name: "Paneer Butter Masala",
+        description: "Paneer in a rich, creamy tomato gravy.",
+        price: 289,
+        image: paneerButterMasala,
+        veg: true,
+      },
+      {
+        id: "palak-paneer",
+        name: "Palak Paneer",
+        description: "Cottage cheese in a smooth spinach gravy.",
+        price: 269,
+        image: palakPaneer,
+        veg: true,
+      },
+      {
+        id: "dal-makhani",
+        name: "Dal Makhani",
+        description: "Slow-cooked black lentils in butter & cream.",
+        price: 229,
+        image: dalMakhani,
+        veg: true,
+      },
+      {
+        id: "malai-kofta",
+        name: "Malai Kofta",
+        description: "Vegetable-paneer dumplings in a mild creamy gravy.",
+        price: 279,
+        image: malaiKofta,
+        veg: true,
+      },
+      {
+        id: "mixed-vegetable-curry",
+        name: "Mixed Vegetable Curry",
+        description: "Seasonal vegetables in a light spiced gravy.",
+        price: 239,
+        image: mixedVegCurry,
+        veg: true,
+      },
+    ],
+  },
+  {
+    id: "curries",
+    name: "Chicken & Mutton Curries",
+    tagline: "Slow-simmered house classics",
+    thumb: butterChicken,
+    items: [
+      {
+        id: "butter-chicken",
+        name: "Butter Chicken",
+        description: "Classic creamy tomato butter chicken.",
+        price: 319,
+        image: butterChicken,
+        veg: false,
+      },
+      {
+        id: "chicken-curry",
+        name: "Chicken Curry",
+        description: "Home-style chicken curry in onion-tomato masala.",
+        price: 289,
+        image: chickenCurry,
+        veg: false,
+      },
+      {
+        id: "mutton-rogan-josh",
+        name: "Mutton Rogan Josh",
+        description: "Kashmiri-style mutton curry, deep spices.",
+        price: 359,
+        image: muttonRoganJosh,
+        veg: false,
+      },
+      {
+        id: "chicken-chettinad",
+        name: "Chicken Chettinad",
+        description: "Fiery South Indian style chicken curry.",
+        price: 309,
+        image: chickenChettinad,
+        veg: false,
+      },
+      {
+        id: "kadhai-chicken",
+        name: "Kadhai Chicken",
+        description: "Chicken cooked with bell peppers in kadhai masala.",
+        price: 299,
+        image: kadhaiChicken,
+        veg: false,
+      },
+      {
+        id: "mutton-kofta-curry",
+        name: "Mutton Kofta Curry",
+        description: "Minced mutton dumplings in spiced gravy.",
+        price: 339,
+        image: muttonKoftaCurry,
+        veg: false,
+      },
+    ],
+  },
+  {
+    id: "seafood",
+    name: "Seafood",
+    tagline: "Coastal, tangy, fresh",
+    thumb: prawnMasala,
+    items: [
+      {
+        id: "fish-curry",
+        name: "Fish Curry",
+        description: "Fresh fish simmered in a tangy coconut-based curry.",
+        price: 329,
+        image: fishCurry,
+        veg: false,
+      },
+      {
+        id: "prawn-masala",
+        name: "Prawn Masala",
+        description: "Prawns cooked in a spiced onion-tomato masala.",
+        price: 359,
+        image: prawnMasala,
+        veg: false,
+      },
+      {
+        id: "goan-fish-curry",
+        name: "Goan Fish Curry",
+        description: "Coconut & kokum based tangy fish curry.",
+        price: 339,
+        image: goanFishCurry,
+        veg: false,
+      },
+      {
+        id: "butter-garlic-prawns",
+        name: "Butter Garlic Prawns",
+        description: "Prawns sauteed in butter & garlic.",
+        price: 379,
+        image: butterGarlicPrawns,
+        veg: false,
+      },
+    ],
+  },
+  {
+    id: "breads",
+    name: "Breads",
+    tagline: "Hot from the tandoor",
+    thumb: butterNaan,
+    items: [
+      {
+        id: "butter-naan",
+        name: "Butter Naan",
+        description: "Soft leavened bread brushed with butter.",
+        price: 59,
+        image: butterNaan,
+        veg: true,
+      },
+      {
+        id: "garlic-naan",
+        name: "Garlic Naan",
+        description: "Naan topped with fresh garlic & coriander.",
+        price: 69,
+        image: garlicNaan,
+        veg: true,
+      },
+      {
+        id: "tandoori-roti",
+        name: "Tandoori Roti",
+        description: "Whole wheat bread from the tandoor.",
+        price: 39,
+        image: tandooriRoti,
+        veg: true,
+      },
+      {
+        id: "lachha-paratha",
+        name: "Lachha Paratha",
+        description: "Multi-layered, flaky whole wheat paratha.",
+        price: 59,
+        image: lachhaParatha,
+        veg: true,
+      },
+      {
+        id: "cheese-naan",
+        name: "Cheese Naan",
+        description: "Naan stuffed with melted cheese.",
+        price: 89,
+        image: cheeseNaan,
+        veg: true,
+      },
+    ],
+  },
+  {
+    id: "beverages",
+    name: "Beverages",
+    tagline: "Cool the spice down",
+    thumb: sweetLassi,
+    items: [
+      {
+        id: "masala-chaas",
+        name: "Masala Chaas",
+        description: "Spiced buttermilk with fresh herbs.",
+        price: 79,
+        image: masalaChaas,
+        veg: true,
+      },
+      {
+        id: "sweet-lassi",
+        name: "Sweet Lassi",
+        description: "Traditional sweetened yogurt drink.",
+        price: 99,
+        image: sweetLassi,
+        veg: true,
+      },
+      {
+        id: "fresh-lime-soda",
+        name: "Fresh Lime Soda",
+        description: "Sweet or salted, chilled.",
+        price: 79,
+        image: freshLimeSoda,
         veg: true,
       },
       {
         id: "virgin-mojito",
         name: "Virgin Mojito",
-        description: "Muddled mint, lime and crushed ice.",
-        price: 190,
+        description: "Fresh mint, lime & soda.",
+        price: 149,
         image: virginMojito,
         veg: true,
-        badge: "Bestseller",
       },
       {
-        id: "berry-blast",
-        name: "Berry Blast Smoothie",
-        description: "Blueberry, strawberry and yoghurt blend.",
-        price: 260,
-        image: berryBlast,
+        id: "soft-drinks",
+        name: "Soft Drinks",
+        description: "Coke / Sprite / Fanta (chilled).",
+        price: 60,
+        image: softDrinks,
         veg: true,
-      },
-      {
-        id: "watermelon-basil",
-        name: "Watermelon Basil Cooler",
-        description: "Fresh watermelon pressed with basil leaves.",
-        price: 210,
-        image: watermelonBasil,
-        veg: true,
-        badge: "Chef's Pick",
-      },
-      {
-        id: "rose-falooda",
-        name: "Rose Falooda",
-        description: "Rose syrup, vermicelli, basil seeds and ice cream.",
-        price: 280,
-        image: roseFalooda,
-        veg: true,
-      },
-    ],
-  },
-  {
-    id: "bakery",
-    name: "Bakery",
-    tagline: "Baked fresh every morning",
-    thumb: butterCroissant,
-    items: [
-      {
-        id: "butter-croissant",
-        name: "Butter Croissant",
-        description: "Twenty-seven flaky layers of French butter.",
-        price: 160,
-        image: butterCroissant,
-        veg: true,
-        badge: "Bestseller",
-      },
-      {
-        id: "choco-chip-cookie",
-        name: "Double Choco Chip Cookie",
-        description: "Gooey centre loaded with dark chocolate.",
-        price: 120,
-        image: chocoChipCookie,
-        veg: true,
-      },
-      {
-        id: "blueberry-muffin",
-        name: "Blueberry Muffin",
-        description: "Sugar-crusted dome packed with berries.",
-        price: 150,
-        image: blueberryMuffin,
-        veg: true,
-      },
-      {
-        id: "cinnamon-roll",
-        name: "Cinnamon Roll",
-        description: "Warm swirls finished with cream cheese glaze.",
-        price: 180,
-        image: cinnamonRoll,
-        veg: true,
-        badge: "Chef's Pick",
-      },
-      {
-        id: "banana-bread",
-        name: "Walnut Banana Bread",
-        description: "Slow-baked, moist and full of toasted walnuts.",
-        price: 150,
-        image: bananaBread,
-        veg: true,
-      },
-      {
-        id: "red-velvet-cupcake",
-        name: "Red Velvet Cupcake",
-        description: "Cocoa sponge under a cream cheese swirl.",
-        price: 170,
-        image: redVelvetCupcake,
-        veg: true,
-      },
-      {
-        id: "almond-biscotti",
-        name: "Almond Biscotti",
-        description: "Twice-baked crunch, made for dunking.",
-        price: 130,
-        image: almondBiscotti,
-        veg: true,
-      },
-    ],
-  },
-  {
-    id: "bites",
-    name: "Bites",
-    tagline: "Savoury plates from the grill",
-    thumb: periPeriFries,
-    items: [
-      {
-        id: "paneer-tikka-sandwich",
-        name: "Paneer Tikka Sandwich",
-        description: "Charred paneer with mint chutney on toast.",
-        price: 260,
-        image: paneerSandwich,
-        veg: true,
-        badge: "Bestseller",
-      },
-      {
-        id: "peri-peri-fries",
-        name: "Peri Peri Fries",
-        description: "Crisp fries dusted with peri spice and dip.",
-        price: 190,
-        image: periPeriFries,
-        veg: true,
-      },
-      {
-        id: "cheesy-nachos",
-        name: "Cheesy Nachos",
-        description: "Corn chips, salsa, jalapeños and sour cream.",
-        price: 280,
-        image: cheesyNachos,
-        veg: true,
-      },
-      {
-        id: "chicken-panini",
-        name: "Grilled Chicken Panini",
-        description: "Pressed sourdough with cheese and herb chicken.",
-        price: 320,
-        image: chickenPanini,
-        veg: false,
-        badge: "Chef's Pick",
-      },
-      {
-        id: "garlic-bread",
-        name: "Cheesy Garlic Bread",
-        description: "Garlic butter baguette under molten cheese.",
-        price: 200,
-        image: garlicBread,
-        veg: true,
-      },
-      {
-        id: "spinach-quiche",
-        name: "Spinach & Corn Quiche",
-        description: "Buttery tart shell with a soft savoury custard.",
-        price: 240,
-        image: spinachQuiche,
-        veg: true,
-      },
-      {
-        id: "chicken-croissant",
-        name: "Chicken Croissant Roll",
-        description: "Flaky croissant stuffed with creamy chicken.",
-        price: 290,
-        image: chickenCroissant,
-        veg: false,
       },
     ],
   },
   {
     id: "desserts",
     name: "Desserts",
-    tagline: "Sweet finishes, served chilled or warm",
-    thumb: lavaCake,
+    tagline: "The sweet last word",
+    thumb: gulabJamun,
     items: [
       {
-        id: "baked-cheesecake",
-        name: "Baked Cheesecake",
-        description: "New York style with wild berry compote.",
-        price: 300,
-        image: bakedCheesecake,
-        veg: true,
-        badge: "Bestseller",
-      },
-      {
-        id: "lava-cake",
-        name: "Molten Lava Cake",
-        description: "Warm chocolate centre with vanilla scoop.",
-        price: 280,
-        image: lavaCake,
-        veg: true,
-        badge: "Chef's Pick",
-      },
-      {
-        id: "tiramisu",
-        name: "Classic Tiramisu",
-        description: "Espresso-soaked sponge and mascarpone cream.",
-        price: 310,
-        image: tiramisu,
+        id: "gulab-jamun",
+        name: "Gulab Jamun",
+        description: "Soft milk dumplings in rose-cardamom syrup.",
+        price: 99,
+        image: gulabJamun,
         veg: true,
       },
       {
-        id: "belgian-waffle",
-        name: "Belgian Waffle",
-        description: "Crisp waffle, banana slices and chocolate sauce.",
-        price: 270,
-        image: belgianWaffle,
+        id: "rasmalai",
+        name: "Rasmalai",
+        description: "Soft paneer discs in saffron-cardamom milk.",
+        price: 119,
+        image: rasmalai,
         veg: true,
       },
       {
-        id: "fruit-tart",
-        name: "Fresh Fruit Tart",
-        description: "Vanilla custard under glazed seasonal fruit.",
-        price: 260,
-        image: fruitTart,
+        id: "gajar-ka-halwa",
+        name: "Gajar Ka Halwa",
+        description: "Warm carrot halwa with nuts.",
+        price: 109,
+        image: gajarKaHalwa,
         veg: true,
       },
       {
-        id: "nutella-brownie",
-        name: "Nutella Brownie",
-        description: "Fudgy brownie, hazelnut drizzle, sea salt.",
-        price: 220,
-        image: nutellaBrownie,
+        id: "kulfi-falooda",
+        name: "Kulfi Falooda",
+        description: "Traditional kulfi with vermicelli & rose syrup.",
+        price: 139,
+        image: kulfiFalooda,
         veg: true,
       },
     ],
   },
 ];
 
-export const totalItems = categories.reduce((sum, c) => sum + c.items.length, 0);
+export const allItems: MenuItem[] = categories.flatMap((category) => category.items);
 
-export const chefsSpecials: MenuItem[] = categories
-  .flatMap((c) => c.items)
-  .filter((i) => i.badge === "Chef's Pick");
+export const totalItems = allItems.length;
+
+const specialIds = ["hyderabadi-chicken-biryani", "paneer-tikka", "kadhai-paneer"];
+
+export const chefsSpecials: MenuItem[] = specialIds
+  .map((id) => allItems.find((item) => item.id === id))
+  .filter((item): item is MenuItem => Boolean(item));

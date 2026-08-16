@@ -1,28 +1,39 @@
 import { useEffect, useState } from "react";
 import { Search, Instagram, Facebook, Twitter, Youtube, Star } from "lucide-react";
-import hero1 from "@/assets/hero-1.png";
-import hero2 from "@/assets/hero-2.png";
-import hero3 from "@/assets/hero-3.png";
-import { CAFE_NAME, chefsSpecials } from "@/data/menu";
+import heroBanner from "@/assets/hero-restaurant-banner.jpg";
+import heroBiryani from "@/assets/hero-biryani.png";
+import heroPaneerTikka from "@/assets/hero-paneer-tikka.png";
+import { CAFE_NAME, chefsSpecials, type Badge } from "@/data/menu";
 
-const slides = [
+type Slide = {
+  image: string;
+  eyebrow: string;
+  title: string;
+  copy: string;
+  variant: "banner" | "dish";
+};
+
+const slides: Slide[] = [
   {
-    image: hero1,
-    eyebrow: "Slow morning ritual",
-    title: "Cappuccino & Croissant",
-    copy: "Espresso pulled to order, paired with butter-laminated pastry.",
+    image: heroBanner,
+    eyebrow: "Family dining, since day one",
+    title: "A Table For Everyone",
+    copy: "Warm lights, big plates and a menu built for the whole family to share.",
+    variant: "banner",
   },
   {
-    image: hero2,
-    eyebrow: "Cold & layered",
-    title: "Caramel Macchiato",
-    copy: "Iced, salted-caramel sweet, with a fudgy brownie on the side.",
+    image: heroBiryani,
+    eyebrow: "Sealed & dum-cooked",
+    title: "Hyderabadi Biryani",
+    copy: "Long-grain basmati layered with chicken, saffron and slow-fried onion.",
+    variant: "dish",
   },
   {
-    image: hero3,
-    eyebrow: "Shaken fresh",
-    title: "Mojito & Nachos",
-    copy: "Mint-heavy cooler with a bowl of cheesy loaded nachos.",
+    image: heroPaneerTikka,
+    eyebrow: "Straight off the skewer",
+    title: "Paneer Tikka",
+    copy: "Tandoor-charred cottage cheese with peppers and mint chutney.",
+    variant: "dish",
   },
 ];
 
@@ -32,6 +43,12 @@ const socials = [
   { icon: Twitter, label: "X" },
   { icon: Youtube, label: "YouTube" },
 ];
+
+const badgeStyles: Record<Badge, string> = {
+  Bestseller: "bg-plum-deep text-cream",
+  "Chef's Pick": "bg-orange text-cream",
+  Trending: "bg-plum-deep text-gold",
+};
 
 export function Hero({
   query,
@@ -59,7 +76,7 @@ export function Hero({
             </span>
             <div className="min-w-0">
               <p className="truncate text-display text-lg uppercase leading-none">{CAFE_NAME}</p>
-              <p className="font-script text-sm text-orange">brewed with intent</p>
+              <p className="font-script text-sm text-orange">family restaurant</p>
             </div>
           </div>
           <div className="hidden items-center gap-2 sm:flex">
@@ -81,7 +98,7 @@ export function Hero({
             type="search"
             value={query}
             onChange={(event) => onQueryChange(event.target.value)}
-            placeholder="Search coffee, bakes, bites…"
+            placeholder="Search biryani, tandoor, curries…"
             aria-label="Search the menu"
             className="min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
           />
@@ -89,6 +106,19 @@ export function Hero({
 
         <div className="relative mt-5 overflow-hidden rounded-3xl bg-gradient-plum p-6 shadow-float sm:p-10">
           <div className="pointer-events-none absolute -right-10 -top-16 h-48 w-48 rounded-full bg-orange/20 blur-2xl" />
+          {slide.variant === "banner" ? (
+            <>
+              <img
+                key={slide.title}
+                src={slide.image}
+                alt="Kitchen Choice family restaurant dining room"
+                width={1280}
+                height={960}
+                className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-45"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-plum-deep/90 via-plum-deep/70 to-transparent" />
+            </>
+          ) : null}
           <div className="relative grid gap-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
             <div key={slide.title} className="animate-rise min-w-0">
               <p className="text-[11px] uppercase tracking-[0.32em] text-gold">{slide.eyebrow}</p>
@@ -102,13 +132,17 @@ export function Hero({
                 </span>
               </div>
             </div>
-            <img
-              src={slide.image}
-              alt={slide.title}
-              width={1024}
-              height={1024}
-              className="animate-float mx-auto h-52 w-52 object-contain drop-shadow-2xl sm:h-72 sm:w-72"
-            />
+            {slide.variant === "dish" ? (
+              <img
+                src={slide.image}
+                alt={slide.title}
+                width={1024}
+                height={1024}
+                className="animate-float mx-auto h-52 w-52 object-contain drop-shadow-2xl sm:h-72 sm:w-72"
+              />
+            ) : (
+              <div className="hidden sm:block sm:h-72 sm:w-72" aria-hidden="true" />
+            )}
           </div>
           <div className="relative mt-6 flex gap-2">
             {slides.map((item, index) => (
@@ -135,20 +169,29 @@ export function Hero({
               {chefsSpecials.length} picks
             </p>
           </div>
-          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-4 grid grid-cols-3 gap-3">
             {chefsSpecials.map((item) => (
               <article
                 key={item.id}
                 className="overflow-hidden rounded-2xl border border-border bg-card shadow-card"
               >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  loading="lazy"
-                  width={768}
-                  height={768}
-                  className="h-24 w-full object-cover sm:h-28"
-                />
+                <div className="relative">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    width={768}
+                    height={768}
+                    className="h-24 w-full object-cover sm:h-36"
+                  />
+                  {item.badge ? (
+                    <span
+                      className={`absolute left-2 top-2 rounded-full px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider ${badgeStyles[item.badge]}`}
+                    >
+                      {item.badge}
+                    </span>
+                  ) : null}
+                </div>
                 <div className="p-3">
                   <h3 className="truncate text-sm font-semibold">{item.name}</h3>
                   <p className="mt-1 text-sm font-bold text-orange">₹{item.price}</p>
